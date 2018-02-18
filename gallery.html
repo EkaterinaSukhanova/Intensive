@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="jquery-3.3.1.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="dimsemenov-Magnific-Popup-2ff1692/dist/magnific-popup.css">
+        <script src="dimsemenov-Magnific-Popup-2ff1692/dist/jquery.magnific-popup.min.js"></script>
+        <script>
+            $(document).ready(function() { //когда документ
+                // будет готов полностью, у нас должна отработать функция
+                $('.parent-container').magnificPopup({
+                    delegate: 'a',
+                    type: 'image'
+                });
+                $('#hide-block').hide() //скрываем
+                $('#show-block').on('click', function(){
+                    var textLink = $('#hide-block').is(':visible') ? 'Показать кота' : 'Скрыть кота';
+                        //если блок виден то скрыть блок, иначе показать
+                    $('#show-block').text(textLink); //поменять текст на то, что у нас получилось
+                    $('#hide-block').slideToggle(); //переключатель с эффектом
+
+                });
+            });
+        </script>
+    </head>
+    <body>
+    <div class="conteiner">
+        <div class="flex1">
+            <header>
+                <a href="#">Main</a>
+                <a href="#">Gallery</a>
+                <a href="#">Profil</a>
+            </header>
+            <h1>Gallery</h1>
+            <div class="parent-container content gallery-photo">
+                <a href="img/cat1.jpg"><img src="img/cat1.jpg" alt="photo"></a>
+                <a href="img/cat2.jpg"><img src="img/cat2.jpg" alt="photo"></a>
+                <a href="img/cat3.jpeg"><img src="img/cat3.jpeg" alt="photo"></a>
+                <a href="img/cat4.jpeg"><img src="img/cat4.jpeg" alt="photo"></a>
+                <a href="img/cat5.jpg"><img src="img/cat5.jpg" alt="photo"></a>
+                <a href="img/cat6.jpg"><img src="img/cat6.jpg" alt="photo"></a>
+            </div>
+            <div id="hide-block" class="parent-container content gallery-photo">
+                <a href="img/cat6.jpg"><img src="img/cat6.jpg" alt="photo"></a>
+            </div>
+            <a id="show-block" href="#">Показать кота</a>
+        </div>
+        <footer>
+            Copyright &copy; 2018
+        </footer>
+    </div>
+    </body>
+</html>
