@@ -71,7 +71,23 @@ p{
     width: 400px;
     margin-bottom: 3%;
 }
+.myfriends img{
+    width: 800px !important;
+}
+.myfriends{
+    /*background-color: #ccc;*/
+    width: 800px;
+    margin: 0 auto;
+}
 
+.slick-next{
+    right: 25px;
+    z-index: 1;
+}
+.slick-prev{
+    left: 25px;
+    z-index: 1;
+}
 h1{
     font-family: 'Roboto', sans-serif;
     color: #2e353d;
